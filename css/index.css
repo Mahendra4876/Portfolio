@@ -1,0 +1,265 @@
+*{
+    margin:0px;
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    background-color:black;
+    
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: auto;
+    
+
+}
+
+header {
+height:20%;
+width:auto;
+display:flex;
+padding: 15px;
+margin-left: 10%;
+transition: all 1s ease-in-out;
+}
+  header a:hover{
+    font-size: 20px;
+    color:red;
+    text-shadow: 5px 10px 15px;
+    /* width:10px;
+    height:20px;
+    background-color:rgb(61, 59, 59);
+    border-radius: 10px;
+    padding:5px; */
+
+    }
+.nav{
+margin-left:30%;
+padding: 10px;
+}
+.nav a{
+    margin-left:40px;
+}
+
+/* .cusor{
+    z-index: 999;
+    position: fixed;
+    margin: 100px;
+    background-color: #fff;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow:  0 0 20px #fff,
+                 0 0 100px #fff,
+                 0 0 200px #fff;
+    animation: colors 5s infinite;
+
+
+}
+@keyframes colors{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor:before{
+    content:'';
+    position: absolute;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%,-30%);
+    border-radius: 50%;
+} */
+ .content{
+    display: flex;
+    width:auto
+ }
+.img{
+    background:url(/images/WhatsApp\ Image\ 2024-10-18\ at\ 13.55.16_d3acb24a.jpg);
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    height:76vh;
+    width: 26%;
+    border-radius:100%;
+    position: relative;
+    margin: 100px;
+    margin-right:50px;
+    margin-left:150px;
+    margin-bottom: 0px;
+    box-shadow: 0 0 25px red,
+    0 0 35px red, 0 0 70px red,0 0 120px red ;
+    animation: moveup 10s ease-in-out infinite;
+    transition: all 2s linear ;
+    
+}
+@keyframes moveup{
+    0%,100%{
+        transform:translateY(0)
+    }
+    50%{
+        transform: translateY(-30px)
+    }
+}
+.img:hover{
+    box-shadow: 0 0 25px aqua,
+    0 0 35px aqua, 0 0 70px aqua,0 0 120px aqua ;
+}
+.about{
+    margin-top:100px;
+    margin-left: 60px;
+    transition: all 2s ease-in-out;
+    width:auto;
+    margin-bottom: 0%;
+
+}
+.about h1{
+    font-size: 60px;
+
+}
+.about h3{
+  font-size: 40px;
+}
+.about h4 span{
+    color:red;
+    font-size:20px;
+    font-weight: 300px;
+}
+.about p {
+   
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif; 
+}
+.logo{
+    margin-top: 40px;    
+    font-size: 25px;
+}
+.logo a  {
+    
+    width:50px;
+    height:50px;
+    border-radius:30px;
+    padding: 10px;
+    border: 5px solid red;
+    margin-left: 20px;
+
+}
+.logo a:hover {
+
+    border-radius:30px;
+    padding: 10px;
+    border: 5px solid red;
+    color:black;
+    background-color: red;
+    box-shadow: 0 0 300px red,0 0 40px red,0 0 70px red,0 0 120px red,0 0 150px red;
+
+}
+.contentbutton a {
+    position: absolute;
+    display:inline-block;
+    height:20px;
+    width:auto;
+    padding:15px 30px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 300px;
+    transition: .5s;
+    overflow: hidden;
+    background-color:white;
+    box-shadow: 0 0 20px white,0 0 50px white;
+    color: black;
+
+}
+.contentbutton a:hover{
+    background-color: red;
+    color:white;
+    box-shadow: 0 0 30px red,0 0 50px red,0 0 90px red,0 0 120px red;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+    scale:1.1;
+} 
+.contentbutton a:first-child{
+filter: hue-rotate(9deg);
+} 
+.contentbutton a span{
+    position: absolute;
+    display: block;
+}
+.contentbutton a span:nth-child(1){
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color: linear-gradient(90deg, transparent,red);
+    animation: animatel 1s infinite;
+}
+@keyframes animatel{
+    0%{
+        left:-100%;
+    
+    }
+    100%{
+        left:100%;
+    }
+}
+.contentbutton a span:nth-child(2){
+    top:-100%;
+    right:0;
+    width:2px;
+    height:100%;
+    background-color: linear-gradient(180deg, transparent,red);
+    animation: animate2 1s infinite;
+    animation-delay: .25s;
+}
+@keyframes animate2{
+    0%{
+        top:-100%;
+    
+    }
+    100%{
+        top:100%;
+    }
+}
+.contentbutton a span:nth-child(3){
+    bottom:0;
+    right:0;
+    width:100%;
+    height:2px;
+    background-color: linear-gradient(270deg, transparent,red);
+    animation: animate3 1s infinite;
+    animation-delay: .5s;
+}
+@keyframes animate3{
+    0%{
+        right:-100%;
+    
+    }
+    100%{
+        right:100%;
+    }
+}
+.contentbutton a span:nth-child(4){
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background-color: linear-gradient(360deg, transparent,red);
+    animation: animate4 1s infinite;
+    animation-delay: .75s;
+}
+@keyframes animate4{
+    0%{
+        bottom:-100%;
+    
+    }
+    100%{
+        bottom:100%;
+    }
+}
+

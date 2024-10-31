@@ -1,0 +1,203 @@
+*{
+    margin:0px;
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: auto;
+    background-color: black;
+}
+header {
+height:20%;
+width:auto;
+display:flex;
+padding: 35px;
+z-index: 99;
+margin-left: 0%;
+transition: all 1s steps(11);
+justify-content: space-between;
+font-family:'Merriweather', serif;
+}
+  header a:hover{
+    font-size: 20px;
+    color:red;
+    text-shadow: 5px 10px 15px;
+    /* width:10px;
+    height:20px;
+    background-color:rgb(61, 59, 59);
+    border-radius: 10px;
+    padding:5px; */
+
+    }
+
+.nav a{
+    margin-left:40px;
+    cursor: pointer;
+    padding: 20px;
+}
+summary{
+    
+    cursor: pointer;
+}
+summary{
+    font-size: 30px;
+}
+header #home{
+    margin-left: 0px;
+}
+
+
+
+@media(max-width:660px){
+    
+    header {
+
+        height:100%;
+        width:auto;
+        display: flex;
+        }
+        header a:hover{
+            font-size: 20px;
+            color:red;
+            text-shadow: 5px 10px 15px;
+            
+            }
+        .nav{
+            margin-left:30%;
+            display: grid;
+            height:100%;
+            width:20%;
+            position:fixed;
+            padding:20PX;
+            z-index: 99;
+            background-color:black;
+            right: 0px;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0) ;
+            
+        
+            }
+        .nav a:hover{
+            height:20px;    
+            width:80px;
+            background-color: rgb(34, 235, 242);
+            padding: 20px;
+            border-radius:50%;
+            
+            
+        }
+        .nav a:hover{
+            background-color:white;
+            color:red;
+            
+        box-shadow:0 0 30px red,0 0 50px red,0 0 90px red,0 0 120px red;
+        }
+       details{
+        cursor: pointer;
+        }
+}
+.all{
+    display:flex;
+    flex-direction: column;
+   
+    
+}
+ .aboutskill1{
+    display:flex;
+    flex-direction: row;
+  justify-content: center;
+  gap:15%;
+  margin-top: 100px;
+  
+  
+}
+.skill-1{
+    height:35%;
+    width:15%;
+    border: 2px solid white;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 0 30px red,0 0 50px red;
+    border-radius: 10%;
+
+}
+.skill-1:hover{
+transform: scale(1.2);
+}
+.skill-1 a li i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+      
+    
+
+}
+#prog1 b{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.skill-2{
+    height:45%;
+    width:75%;
+    border: 2px solid white;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 0 30px red,0 0 50px red;
+    border-radius: 15%;
+
+}
+.skill-2:hover{
+transform: scale(1.2);
+}
+.skill-2 a li i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+      
+    
+
+}
+#prog2 b{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.ski{
+    position: absolute;
+    left: 42%;
+    font-size: 50px;
+    padding: 10px;
+    top:15%;
+    animation: anim 5s ease-in-out 1 alternate-reverse;
+    text-shadow: 0 0 20px red;
+
+}
+@keyframes anim{
+    100%{
+        transform: translateY(-50%);
+    }
+    50%{
+        transform: translateY(-10%)
+    }
+    0%{
+        transform: translateY(0%);
+    }
+}
+.aboutskill3{
+    position: absolute;
+  width:40%;
+  height:40%;
+  background-color: aqua;
+    border: 2px solid red   ;
+}
+
+
+
