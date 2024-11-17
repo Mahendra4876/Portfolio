@@ -293,7 +293,7 @@ filter: hue-rotate(9deg);
 @media(max-width:660px){
     .heading{
         margin-left:20%;
-        font-size: 80px;
+        font-size: 60px;
      }
      .content img{
        margin-left:20%;
