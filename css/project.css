@@ -1,0 +1,269 @@
+*{
+    margin:0px;
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: auto;
+    background-color: black;
+   
+
+    
+
+}
+
+
+header {
+height:20%;
+width:auto;
+display:flex;
+padding: 35px;
+z-index: 99;
+margin-left: 0%;
+transition: all 1s steps(11);
+justify-content: space-between;
+font-family:'Merriweather', serif;
+}
+  header a:hover{
+    font-size: 20px;
+    color:red;
+    text-shadow: 5px 10px 15px;
+    /* width:10px;
+    height:20px;
+    background-color:rgb(61, 59, 59);
+    border-radius: 10px;
+    padding:5px; */
+
+    }
+
+.nav a{
+    margin-left:40px;
+    cursor: pointer;
+    padding: 20px;
+}
+summary{
+    
+    cursor: pointer;
+}
+summary{
+    font-size: 30px;
+}
+header #home{
+    margin-left: 0px;
+}
+
+
+
+@media(max-width:860px){
+    
+    header {
+
+        height:100%;
+        width:auto;
+        display: flex;
+        }
+        header a:hover{
+            font-size: 20px;
+            color:red;
+            text-shadow: 5px 10px 15px;
+            
+            }
+        .nav{
+            margin-left:30%;
+            display: grid;
+            height:100%;
+            width:20%;
+            position:fixed;
+            padding:20PX;
+            z-index: 99;
+            background-color:black;
+            right: 0px;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0) ;
+            
+        
+            }
+        .nav a:hover{
+            height:20px;    
+            width:80px;
+            background-color: rgb(34, 235, 242);
+            padding: 20px;
+            border-radius:50%;
+            
+            
+        }
+        .nav a:hover{
+            background-color:white;
+            color:red;
+            
+        box-shadow:0 0 30px red,0 0 50px red,0 0 90px red,0 0 120px red;
+        }
+       details{
+        cursor: pointer;
+        }
+}
+
+.content{
+    width:auto;
+ }
+ .heading{
+    margin-left:40%;
+    font-size: 80px;
+ }
+ 
+ h1 {
+    text-align: center;
+    color: red;
+    margin-bottom: 40px;
+  }
+
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+    
+  }
+
+  .flip-card {
+    background: transparent;
+    width: 100%;
+    max-width: 280px;
+    height: 300px;
+    perspective: 1000px;
+    gap:50px;
+    text-shadow: 0 0 300px red,0 0 40px red,0 0 70px red,0 0 120px red,0 0 150px red;;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;   
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px red;
+  }
+
+  .flip-card-front {
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .flip-card-front img {
+    width:200px;
+    height:fit-content;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .flip-card-front h3 {
+    margin-top: 10px;
+    color: red;
+  }
+
+  .flip-card-back {
+    background:black;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .flip-card-back button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background:red;
+    color:white;
+    box-shadow: 0 0 10px red,0 0 15px red,0 0 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    scale: 1.1;
+  }
+  .flip-card-back button:hover{
+scale:1.4;
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .modal-content {
+    background: #111;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    animation: scaleIn 0.4s ease-in-out;
+    position: relative;
+    color: white;
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    background: none;
+  }
+
+  .modal-content h2 {
+    color: red;
+    margin-top: 0;
+  }
+
+  .modal-content p, .modal-content a {
+    font-size: 15px;
+    line-height: 1.6;
+    color: white;
+  }
+
+  .modal-content a {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .flip-card {
+      max-width: 100%;
+    }
+  }
