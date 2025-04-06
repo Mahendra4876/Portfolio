@@ -11,77 +11,108 @@
 body{
     font-family: 'Open Sans', sans-serif;
     height: auto;
+    background-color: black;
     
 
 }
 
 header {
-height:20%;
-width:auto;
-display:flex;
-padding: 15px;
-margin-left: 10%;
-transition: all 1s ease-in-out;
-}
-  header a:hover{
-    font-size: 20px;
-    color:red;
-    text-shadow: 5px 10px 15px;
-    /* width:10px;
-    height:20px;
-    background-color:rgb(61, 59, 59);
-    border-radius: 10px;
-    padding:5px; */
-
+    height:20%;
+    width:auto;
+    display:flex;
+    padding: 35px;
+    z-index: 99;
+    margin-left: 0%;
+    transition: all 1s steps(11);
+    justify-content: space-between;
+    font-family:'Merriweather', serif;
     }
-.nav{
-margin-left:30%;
-padding: 10px;
-}
-.nav a{
-    margin-left:40px;
-}
-
-/* .cusor{
-    z-index: 999;
-    position: fixed;
-    margin: 100px;
-    background-color: #fff;
-    width:20px;
-    height:20px;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow:  0 0 20px #fff,
-                 0 0 100px #fff,
-                 0 0 200px #fff;
-    animation: colors 5s infinite;
-
-
-}
-@keyframes colors{
-    0%{
-        filter: hue-rotate(0deg);
+      header a:hover{
+        font-size: 20px;
+        color:red;
+        text-shadow: 5px 10px 15px;
+        /* width:10px;
+        height:20px;
+        background-color:rgb(61, 59, 59);
+        border-radius: 10px;
+        padding:5px; */
+    
+        }
+    
+    .nav a{
+        margin-left:40px;
+        cursor: pointer;
+        padding: 20px;
     }
-    100%{
-        filter: hue-rotate(360deg);
+    summary{
+        
+        cursor: pointer;
     }
-}
-.cursor:before{
-    content:'';
-    position: absolute;
-    background-color: #fff;
-    width: 50px;
-    height: 50px;
-    opacity: 0.2;
-    transform: translate(-30%,-30%);
-    border-radius: 50%;
-} */
+    summary{
+        font-size: 30px;
+    }
+    header #home{
+        margin-left: 0px;
+    }
+    
+    
+    
+    @media(max-width:860px){
+        
+        header {
+    
+            height:100%;
+            width:auto;
+            display: flex;
+            }
+            header a:hover{
+                font-size: 20px;
+                color:red;
+                text-shadow: 5px 10px 15px;
+                
+                }
+            .nav{
+                margin-left:30%;
+                display: grid;
+                height:100%;
+                width:20%;
+                position:fixed;
+                padding:20PX;
+                z-index: 99;
+                background-color:black;
+                right: 0px;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0) ;
+                
+            
+                }
+            .nav a:hover{
+                height:20px;    
+                width:80px;
+                background-color: rgb(34, 235, 242);
+                padding: 20px;
+                border-radius:50%;
+                
+                
+            }
+            .nav a:hover{
+                background-color:white;
+                color:red;
+                
+            box-shadow:0 0 30px red,0 0 50px red,0 0 90px red,0 0 120px red;
+            }
+           details{
+            cursor: pointer;
+            }
+    }
+
+
  .content{
     display: flex;
     width:auto
  }
 .img{
-    background:url(../images/WhatsApp\ Image\ 2024-10-18\ at\ 13.55.16_d3acb24a.jpg);
+    content:url(../images/WhatsApp\ Image\ 2024-10-18\ at\ 13.55.16_d3acb24a.jpg);
     background-size: cover;
     background-position: center;
     display:flex;
@@ -91,8 +122,8 @@ padding: 10px;
     border-radius:100%;
     position: relative;
     margin: 100px;
-    margin-right:50px;
-    margin-left:150px;
+    margin-right:5%;
+    margin-left:10%;
     margin-bottom: 0px;
     box-shadow: 0 0 25px red,
     0 0 35px red, 0 0 70px red,0 0 120px red ;
@@ -109,8 +140,8 @@ padding: 10px;
     }
 }
 .img:hover{
-    box-shadow: 0 0 25px aqua,
-    0 0 35px aqua, 0 0 70px aqua,0 0 120px aqua ;
+    box-shadow: 0 0 35px rgb(5, 84, 84),
+    0 0 75px rgb(5, 84, 84), 0 0 70px rgb(5, 84, 84),0 0 120px rgb(5, 84, 84) ;
 }
 .about{
     margin-top:100px;
@@ -122,6 +153,10 @@ padding: 10px;
 }
 .about h1{
     font-size: 60px;
+
+}
+.about .text{
+    font-size:25px;
 
 }
 .about h3{
@@ -140,6 +175,7 @@ padding: 10px;
 .logo{
     margin-top: 40px;    
     font-size: 25px;
+    
 }
 .logo a  {
     
@@ -149,6 +185,7 @@ padding: 10px;
     padding: 10px;
     border: 5px solid red;
     margin-left: 20px;
+    
 
 }
 .logo a:hover {
@@ -167,9 +204,9 @@ padding: 10px;
     height:20px;
     width:auto;
     padding:15px 30px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-bottom: 300px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 30%;
     transition: .5s;
     overflow: hidden;
     background-color:white;
@@ -262,4 +299,125 @@ filter: hue-rotate(9deg);
         bottom:100%;
     }
 }
+@media (max-width: 860px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 
+    .img {
+        width: 60%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 50%;
+    }
+
+    .about {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about h1 {
+        font-size: 35px;
+    }
+
+    .about h3 {
+        font-size: 25px;
+    }
+
+    .about .text {
+        font-size: 18px;
+    }
+
+    .about h4 span {
+        font-size: 18px;
+    }
+
+    .about p {
+        font-size: 20px;
+        padding: 0 10px;
+        text-align:justify;
+    }
+
+    /* .logo {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .logo a {
+        margin: 10px;
+    } */
+
+    /* .contentbutton a {
+        margin-left: 0;
+        position: relative;
+        font-size: 14px;
+        padding: 12px 25px;
+        margin-top: 30px;
+    } */
+    .logo a  {
+        
+        width:50px;
+        height:50px;
+        border-radius:30px;
+        padding: 1%;
+        border: 5px solid red;
+        margin-left: 20px;
+        
+    
+    }
+    .logo a:hover {
+    
+        border-radius:30px;
+        padding: 10px;
+        border: 5px solid red;
+        color:black;
+        background-color: red;
+        box-shadow: 0 0 300px red,0 0 40px red,0 0 70px red,0 0 120px red,0 0 150px red;
+    
+    }
+    .contentbutton a {
+        position: absolute;
+        display:inline-block;
+        height:20px;
+        width:auto;
+        padding:15px 30px;
+        margin-top: 5%;
+        margin-left: 1%;
+        margin-bottom: 300px;
+        transition: .5s;
+        overflow: hidden;
+        background-color:white;
+        box-shadow: 0 0 20px white,0 0 50px white;
+        color: black;
+    
+    }
+    .contentbutton a:hover{
+        background-color: red;
+        color:white;
+        box-shadow: 0 0 30px red,0 0 50px red,0 0 90px red,0 0 120px red;
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+        scale:1.1;
+    } 
+}
+@media(max-width:440){
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .img {
+        width: 60%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 50%;
+    }
+
+}
+    
