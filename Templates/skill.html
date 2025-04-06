@@ -13,44 +13,65 @@
 <body>
 <header>    
         <a  href="" id="logo" ><img src="../images/logo.png" width="50px" height="40px">PORTFOLIO</a>
-    <details><summary><i class="fa-solid fa-bars fa-beat-fade" style="color: #ea1026;"></i></summary><div class="nav" id="nav1">
+    <abbr title="Nav bar"><details><summary><i class="fa-solid fa-bars fa-beat-fade" style="color: #ea1026;"></i></summary><div class="nav" id="nav1"></abbr>
     <a href="../index.html" id="home">HOME</a>
     <a href="../Templates/about.html">ABOUT</a>
     <a href="#">SKILLS</a>
-    <a href="#">PROJECTS</a>
-    <a href="#">CONTACT</a>  
+    <a href="../Templates/Project.html">PROJECTS</a>
+    <a href="../Templates/contact.html">CONTACT</a>  
 
     </div></details>    
     </header>
-    <section>
-        <div class="ski"><b>SKILLS</b></div>
-
-    <section CLASS="all" >
-       
-        <div class="aboutskill1">
-        <div class="skill-1" id="prog1"><b><a>Programming Skills</a></b></br>
-           <a><i class="fa-brands fa-html5" style="color: #ee692f;"></i>    HTML</a></br>
-            <a><i class="fa-brands fa-css3-alt" style="color: #091f69;"></i> CSS</a></br>
-            <a><i class="fa-brands fa-js" style="color: #dfd13a;"></i> JAVASCRIPT </a></br>
-            <a><i class="fa-brands fa-python" style="color: #2912d9;"></i> PYTHON</a></br>
+    <section class="skills-section" id="skills">
+        <div class="parallax-bg"></div>
+        <h2 class="skills-heading">My <span>Skills</span></h2>
+    
+        <div id="skillsCategories">
         </div>
-        <div>
-        <div class="skill-2" id="prog2"><b><a>Frameworks</a></b></br>
-            <a><i class="fa-brands fa-bootstrap" style="color: #0c8ced;"></i> Bootstrap </a></br>
-            <a><i class="fa-brands fa-node" style="color: #568f7e;"></i> Node.js </a></br>
-            <!-- <a><i class="fa-brands fa-js" style="color: #dfd13a;"></i> JAVASCRIPT </a></br> -->
-        </div><br>
-        <!-- <div class="aaboutskill3">
-        <div class="skill-4">version control</div>
-        </div> -->
-        </div>
-        </div>
-    </section>
-    <section>
-          <div class="aaboutskill3">
-        <div class="skill-4">version control</div>
-        </div>
-    </section>
-</section>
+      </section>
+    
+      <script>
+        const skillData = {
+          "Web Development 💻": ["HTML5", "CSS3", "JavaScript", "React","Bootstrap"],
+          " Programming⚙️": ["Python","Java","MySQL","Flask"],
+          "Tools 🛠️": ["Git", "GitHub", "VS Code","XAMP","Google Colab"],
+        };
+    
+        const categoriesContainer = document.getElementById('skillsCategories');
+        for (const [category, skills] of Object.entries(skillData)) {
+          const categoryDiv = document.createElement('div');
+          categoryDiv.className = 'category';
+    
+          const title = document.createElement('h3');
+          title.textContent = category;
+          categoryDiv.appendChild(title);
+    
+          const grid = document.createElement('div');
+          grid.className = 'skills-grid';
+    
+          skills.forEach(skill => {
+            const skillBox = document.createElement('div');
+            skillBox.className = 'skill-box';
+            skillBox.textContent = skill;
+            grid.appendChild(skillBox);
+          });
+    
+          categoryDiv.appendChild(grid);
+          categoriesContainer.appendChild(categoryDiv);
+        }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.2 });
+    
+        document.querySelectorAll('.skill-box').forEach(el => observer.observe(el));
+        window.addEventListener('scroll', () => {
+          const scrollVal = window.scrollY;
+          document.querySelector('.parallax-bg').style.transform = `translateX(-${scrollVal * 0.1}px)`;
+        });
+      </script>
 </body>
 <html>
