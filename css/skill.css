@@ -4,12 +4,13 @@
     color: white;
     text-decoration: none;
     list-style-type: none;
+    font-family: 'Segoe UI', sans-serif;
     
 
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    height: auto;
+    overflow-x: hidden;
     background-color: black;
 }
 header {
@@ -27,11 +28,6 @@ font-family:'Merriweather', serif;
     font-size: 20px;
     color:red;
     text-shadow: 5px 10px 15px;
-    /* width:10px;
-    height:20px;
-    background-color:rgb(61, 59, 59);
-    border-radius: 10px;
-    padding:5px; */
 
     }
 
@@ -53,7 +49,7 @@ header #home{
 
 
 
-@media(max-width:660px){
+@media(max-width:860px){
     
     header {
 
@@ -101,103 +97,80 @@ header #home{
         cursor: pointer;
         }
 }
-.all{
-    display:flex;
-    flex-direction: column;
-   
-    
-}
- .aboutskill1{
-    display:flex;
-    flex-direction: row;
-  justify-content: center;
-  gap:15%;
-  margin-top: 100px;
-  
-  
-}
-.skill-1{
-    height:35%;
-    width:15%;
-    border: 2px solid white;
-    padding: 30px;
-    justify-content: center;
-    align-items: center;
-    box-shadow:0 0 30px red,0 0 50px red;
-    border-radius: 10%;
+.skills-section {
+    padding: 100px 20px;
+    position: relative;
+  }
 
-}
-.skill-1:hover{
-transform: scale(1.2);
-}
-.skill-1 a li i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 250px;
-      
-    
+ 
 
-}
-#prog1 b{
-    font-size: 20px;
-    padding-bottom: 10px;
-}
-.skill-2{
-    height:45%;
-    width:75%;
-    border: 2px solid white;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-    box-shadow:0 0 30px red,0 0 50px red;
-    border-radius: 15%;
+  @keyframes scroll-bg {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 
-}
-.skill-2:hover{
-transform: scale(1.2);
-}
-.skill-2 a li i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
-      
-    
+  .skills-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
 
-}
-#prog2 b{
-    font-size: 20px;
-    padding-bottom: 10px;
-}
-.ski{
-    position: absolute;
-    left: 42%;
-    font-size: 50px;
-    padding: 10px;
-    top:15%;
-    animation: anim 5s ease-in-out 1 alternate-reverse;
-    text-shadow: 0 0 20px red;
+  .skills-heading span {
+    color: red;
+  }
 
-}
-@keyframes anim{
-    100%{
-        transform: translateY(-50%);
-    }
-    50%{
-        transform: translateY(-10%)
-    }
-    0%{
-        transform: translateY(0%);
-    }
-}
-.aboutskill3{
-    position: absolute;
-  width:40%;
-  height:40%;
-  background-color: aqua;
-    border: 2px solid red   ;
-}
+  .category {
+    margin-bottom: 60px;
+  }
 
+  .category h3 {
+    font-size: 2rem;
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px red;
+  }
 
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
+  .skill-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid red;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px red;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.4s ease;
+  }
+
+  .skill-box.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .skill-box:hover {
+    scale: 1.08;
+    box-shadow: 0 0 30px red;
+  }
+
+  @media (max-width: 860px) {
+    .skills-heading { font-size: 3.2rem; }
+    .category h3 { font-size: 1.5rem; }
+  }
+  @media (max-width: 600px) {
+    .skills-heading { font-size: 2.2rem; }
+    .category h3 { font-size: 1.5rem; }
+  }
+  @media (max-width: 460px) {
+    .skills-heading { font-size: 1.8rem; }
+    .category h3 { font-size: 1.5rem; }
+  }
