@@ -59,7 +59,7 @@ header #home{
 
 
 
-@media(max-width:660px){
+@media(max-width:860px){
     
     header {
 
@@ -107,6 +107,28 @@ header #home{
         cursor: pointer;
         }
 }
+.name
+{
+    position: absolute;
+    font-size: 6rem;
+    font-family:Espin;
+    margin-top: 15%;
+    margin-left: 5%;
+    padding:10px;
+    animation: up 5s linear;
+    
+}
+@keyframes up{
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.name p{
+    color:#f60b0b;
+}
 
  .content{
     width:auto;
@@ -125,7 +147,7 @@ header #home{
     background-color:black;
     border:5px solid rgb(212, 20, 20); 
     animation: moveup 3s ease-in 2s;
-   margin-left:70%;
+   margin-left:60%;
    margin-top:7%;
    justify-content: center;
    background-size: cover;
@@ -145,24 +167,18 @@ header #home{
 @keyframes moveup{
    0%{  
     transform: translate3d(0,0,0);
-    transform: translateX(-1500px);
+    transform: translateY(150px);
+    overflow-y:hidden ;
    }
    100%{
     transform: translate3d(1,1,1);
-    transform: translateX(0px);
+    transform: translateY(0px);
    }
     
 }
 
 
-.img.circle-span{
-    position: absolute;
-    border:5px solid red;
-    width:100%;
-    height:100%;
-    border-radius: 50%;
-    
-}
+
 .about{
     margin-top:100px;
     margin-left:10%;
@@ -241,15 +257,68 @@ header #home{
 
 
 
-@media(max-width:660px){
+@media(max-width:860px){
     .heading{
         margin-left:20%;
         font-size: 70px;
      }
-     .content img{
-       margin-left:15%;
+     .name
+{
+    position: absolute;
+    font-size: 2.2rem;
+    margin-top: 15%;
+    margin-left: 5%;
+    padding:10px;   
+}
+aside{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+     .name p{
+        color:#f60b0b;
+    }
+    
+    .content img{
+        height:-9vh 150px 150px;
+        width:250px;
+        /* border-radius:50%; */
+        background-color:black;
+        border:5px solid rgb(212, 20, 20); 
+        animation: moveup 3s ease-in 2s;
+       margin-left:60%;
+       margin-top:7%;
+       justify-content: center;
+       background-size: cover;
+       box-shadow: 0 0 30px red;
+       cursor:zoom-in;
+    
+       
+    
         
     }
+    
+    .content img:hover{
+        box-shadow: 0 0 20px #f60b0b,
+        0 0 35px #f60b0b, 0 0 50px #f60b0b;
+        scale: 1.1;
+    }
+    @keyframes moveup{
+       0%{  
+        transform: translate3d(0,0,0);
+        transform: translateY(150px);
+        overflow-y:hidden ;
+       }
+       100%{
+        transform: translate3d(1,1,1);
+        transform: translateY(0px);
+       }
+        
+    }
+    
+    
+    
+    
     .about{
         font-size: 16px;
     }
@@ -267,7 +336,6 @@ h2 {
     text-shadow: 0 0 5px;
 }
 
-/* Timeline */
 .timeline {
     position: relative;
     max-width: 600px;
@@ -275,7 +343,7 @@ h2 {
 }
 
 
-/* Single Vertical Line */
+
 .timeline::before {
     content: "";
     position: absolute;
@@ -285,7 +353,6 @@ h2 {
     background:red;
 }
 
-/* Timeline Items */
 .timeline-item {
     position: relative;
     padding-left: 10%;
@@ -293,7 +360,7 @@ h2 {
     text-align: left;
 }
 
-/* Timeline Dots */
+
 .timeline-dot {
     position: absolute;
     left: 0px;
@@ -306,7 +373,6 @@ h2 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Timeline Content */
 .timeline-content {
     background:rgb(5, 84, 84);
     padding: 25px;
@@ -333,4 +399,45 @@ h2 {
     margin: 5px 0;
 }
 
+@media(max-width:440px){
+    .heading{
+        margin-left:20%;
+        font-size: 50px;
+     }
+     .name
+{
+    position: absolute;
+    font-size: 1.7rem;
+    margin-top: 15%;
+    margin-left: 5%;
+    padding:10px;   
+}
+aside{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+     .name p{
+        color:#f60b0b;
+    }
+    
+    .content img{
+        height:-5vh 120px 120px;
+        width:150px;
+        /* border-radius:50%; */
+        background-color:black;
+        border:5px solid rgb(212, 20, 20); 
+        animation: moveup 3s ease-in 2s;
+       margin-left:60%;
+       margin-top:7%;
+       justify-content: center;
+       background-size: cover;
+       box-shadow: 0 0 30px red;
+       cursor:zoom-in;
+    
+       
+    
+        
+    }  
+}
 
