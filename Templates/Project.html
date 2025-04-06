@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <link rel="stylesheet" href="../css/project.css">
+  <link rel="stylesheet" href="/javascript.js/cursor.js">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body> <header>    
+    <a  href="" id="logo" ><img src="../images/logo.png" width="50px" height="40px">PORTFOLIO</a>
+<details><summary><i class="fa-solid fa-bars fa-beat-fade" style="color: #ea1026;"></i></summary><div class="nav" id="nav1">
+<a href="../index.html" id="home">HOME</a>
+<a href="../Templates/about.html">ABOUT</a>
+<a href="../Templates/skill.html">SKILLS</a>
+<a href="#">PROJECTS</a>
+<a href="../Templates/contact.html">CONTACT</a>     
+
+</div></details>    
+</header>
+
+
+  <h1>My Projects</h1>
+
+  <div class="project-container">
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../images/project-management--with-copyspace.jpg    " alt="Project 1"  height="object-fit" width="object-fit"/>
+          <h3>Portfolio Site</h3>
+        </div>
+        <div class="flip-card-back">
+          <button onclick="openModal('weather')">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../images/all .png" alt="Project 2" />
+          <h3>Plant Disease Detection Using Deep Transfer Learning</h3>
+        </div>
+        <div class="flip-card-back">
+          <button onclick="openModal('todo')">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="project3.jpg" alt="Project 3" />
+          <h3>#</h3>
+        </div>
+        <div class="flip-card-back">
+          <button onclick="openModal('portfolio')">View Details</button>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="project4.jpg" alt="Project 4" />
+          <h3>#</h3>
+        </div>
+        <div class="flip-card-back">
+          <button onclick="openModal('calculator')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="projectModal">
+    <div class="modal-content" id="modalContent">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <p><a id="modalLink" href="#" target="_blank">View on GitHub</a></p>
+    </div>
+  </div>
+
+  <script>
+    const projectData = {
+      weather: {
+        title: "Personal Portfolio Website",
+        desc: "Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase web development skill and projects. Implemented responsive design techniques to ensure optimal performance on desktops and mobile devices.",
+        link: "https://mahendra4876.github.io/Portfolio/"
+      },
+      todo: {
+        title: "Plant Disease Detection Using Deep Transfer Learning",
+        desc: "Developed a deep learning model using Convolutional Neural Networks (CNN) to identify and classify crop diseases from leaf images. Collected and preprocessed agricultural datasets, applied image augmentation techniques, and trained a CNN model to detect plant diseases with high accuracy. Evaluated model performance using metrics like accuracy, precision, and recall to ensure reliable predictions. Additionally, the system recommends suitable pesticides and fertilizers for the identified diseases.",
+        link: "https://github.com/yourusername/todo-list"
+      },
+      portfolio: {
+        title: "#",
+        desc: ".",
+        link: "https://github.com/yourusername/portfolio-site"
+      },
+      calculator: {
+        title: "#",
+        desc: ".",
+        link: "https://github.com/yourusername/calculator-app"
+      }
+    };
+
+    function openModal(id) {
+      const modal = document.getElementById("projectModal");
+      const data = projectData[id];
+      document.getElementById("modalTitle").textContent = data.title;
+      document.getElementById("modalDesc").textContent = data.desc;
+      document.getElementById("modalLink").href = data.link;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("projectModal").style.display = "none";
+    }
+
+    window.addEventListener("click", function (e) {
+      const modal = document.getElementById("projectModal");
+      if (e.target === modal) closeModal();
+    });
+  </script>
+
+</body>
+</html>
