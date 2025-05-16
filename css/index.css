@@ -331,6 +331,9 @@ filter: hue-rotate(9deg);
       .about h4 {
         margin-bottom: 0.5rem;
       }
+      .about h1{
+        font-size:45px ;
+      }
       
       .about p {
         margin-bottom: 1rem;
