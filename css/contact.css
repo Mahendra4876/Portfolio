@@ -168,6 +168,9 @@ header #home{
     box-shadow: 0 0 300px red,0 0 40px red,0 0 70px red,0 0 120px red,0 0 150px red;
 
 }
+@media(max-width:860px){
+    
+}
 
 
 
