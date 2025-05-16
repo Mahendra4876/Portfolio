@@ -315,7 +315,21 @@ aside{
        }
         
     }
+    .contentbutton a {
+        position: absolute;
+        display:inline-block;
+        height:20px;
+        width:auto;
+        padding:15px 30px;
+        margin-top: 0px;
+        margin-left:35%;
+        margin-bottom: 300px;
+        overflow: hidden;
+        background-color:white;
+        box-shadow: 0 0 20px white,0 0 50px white;
+        color: black;
     
+    }
     
     
     
@@ -439,5 +453,20 @@ aside{
     
         
     }  
+    .contentbutton a {
+        position: absolute;
+        display:inline-block;
+        height:20px;
+        width:auto;
+        padding:15px 30px;
+        margin-top: 0px;
+        margin-left:20%;
+        margin-bottom: 300px;
+        overflow: hidden;
+        background-color:white;
+        box-shadow: 0 0 20px white,0 0 50px white;
+        color: black;
+    
+    }
 }
 
