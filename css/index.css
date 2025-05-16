@@ -4,14 +4,14 @@
     color: white;
     text-decoration: none;
     list-style-type: none;
-    background-color:black;
+    
     
 
 }
 body{
     font-family: 'Open Sans', sans-serif;
     height: auto;
-    background-color: black;
+    background-color:black;
     
 
 }
@@ -33,7 +33,7 @@ header {
         text-shadow: 5px 10px 15px;
         /* width:10px;
         height:20px;
-        background-color:rgb(61, 59, 59);
+        background-color:;
         border-radius: 10px;
         padding:5px; */
     
@@ -77,9 +77,9 @@ header {
                 height:100%;
                 width:20%;
                 position:fixed;
-                padding:20PX;
+                padding:15PX;
                 z-index: 99;
-                background-color:black;
+                background-color:transparent;
                 right: 0px;
                 justify-content: center;
                 background-color: rgba(0, 0, 0, 0) ;
@@ -89,7 +89,7 @@ header {
             .nav a:hover{
                 height:20px;    
                 width:80px;
-                background-color: rgb(34, 235, 242);
+                background-color: red;
                 padding: 20px;
                 border-radius:50%;
                 
@@ -117,31 +117,31 @@ header {
     background-position: center;
     display:flex;
     justify-content: center;
-    height:76vh;
-    width: 26%;
-    border-radius:100%;
+    height:176%;
+    width: 36%;
+    border-radius:10%;
     position: relative;
     margin: 100px;
     margin-right:5%;
     margin-left:10%;
     margin-bottom: 0px;
     box-shadow: 0 0 25px red,
-    0 0 35px red, 0 0 70px red,0 0 120px red ;
+    0 0 35px red;
     animation: moveup 10s ease-in-out infinite;
     transition: all 2s linear ;
     
 }
-@keyframes moveup{
+/* @keyframes moveup{
     0%,100%{
         transform:translateY(0)
     }
     50%{
         transform: translateY(-30px)
     }
-}
+} */
 .img:hover{
-    box-shadow: 0 0 35px rgb(5, 84, 84),
-    0 0 75px rgb(5, 84, 84), 0 0 70px rgb(5, 84, 84),0 0 120px rgb(5, 84, 84) ;
+    box-shadow: 0 0 30px red,0 0 50px red,0 0 70px red,0 0 90px red,0 0 120px red;
+    
 }
 .about{
     margin-top:100px;
@@ -169,7 +169,7 @@ header {
 }
 .about p {
    
-    margin-top: 10px;
+    margin-top: 10px;   
     font-family: 'Arial', sans-serif; 
 }
 .logo{
@@ -215,7 +215,7 @@ header {
 
 }
 .contentbutton a:hover{
-    background-color: red;
+    background-color:red;
     color:white;
     box-shadow: 0 0 30px red,0 0 50px red,0 0 90px red,0 0 120px red;
     -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
@@ -307,39 +307,36 @@ filter: hue-rotate(9deg);
     }
 
     .img {
-        width: 60%;
-        height: auto;
-        margin: 20px 0;
-        border-radius: 50%;
+        
+        height:176%;
+        width: 46%;
+        border-radius:10%;
+        position: relative;
+        margin: 50px;
+        margin-right:5%;
+        margin-left:10%;
+        margin-bottom: 0px;
+        
+        
     }
 
     .about {
-        margin: 0;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .about h1 {
-        font-size: 35px;
-    }
-
-    .about h3 {
-        font-size: 25px;
-    }
-
-    .about .text {
-        font-size: 18px;
-    }
-
-    .about h4 span {
-        font-size: 18px;
-    }
-
-    .about p {
-        font-size: 20px;
-        padding: 0 10px;
-        text-align:justify;
-    }
+        padding: 1rem;
+        max-width: 800px;
+        margin: auto;
+      }
+      
+      .about h1,
+      .about h3,
+      .about h4 {
+        margin-bottom: 0.5rem;
+      }
+      
+      .about p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+      
 
     /* .logo {
         display: flex;
@@ -378,7 +375,7 @@ filter: hue-rotate(9deg);
         border: 5px solid red;
         color:black;
         background-color: red;
-        box-shadow: 0 0 300px red,0 0 40px red,0 0 70px red,0 0 120px red,0 0 150px red;
+        box-shadow: 0 0 30px red,0 0 50px red,0 0 70px red,0 0 90px red,0 0 120px red;
     
     }
     .contentbutton a {
@@ -388,7 +385,7 @@ filter: hue-rotate(9deg);
         width:auto;
         padding:15px 30px;
         margin-top: 5%;
-        margin-left: 1%;
+        margin-left: 3.9%;
         margin-bottom: 300px;
         transition: .5s;
         overflow: hidden;
